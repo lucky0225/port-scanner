@@ -3,8 +3,11 @@ import socket
 
 # socket.AF_INET      - stance for IPv4
 # socket.SOCK_STREAM  - stance for tcp packets
-
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# print "closed" if 2 seconds expire without a result
+socket.setdefaulttimeout(2)
+
 # insert IPv4 address
 # IPv4 -> "ipconfig" in cmd
 #insert IPv4 address
