@@ -5,14 +5,15 @@ import socket
 # socket.SOCK_STREAM  - stance for tcp packets
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#insert IPv4 address
+# insert IPv4 address
+# IPv4 -> "ipconfig" in cmd
 ip_1 = ""
 host = ip_1
 
 #example port
 port = 443
 
-#function to test, if port is open
+# function to test, if port is open
 def portscanner(port):
     #if connection results in error -> closed
     if sock.connect_ex((host,port)):
