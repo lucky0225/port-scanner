@@ -7,11 +7,11 @@ import socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # insert IPv4 address
 # IPv4 -> "ipconfig" in cmd
-ip_1 = ""
-host = ip_1
+#insert IPv4 address
+host = input("Insert the IPv4 address here: ")
 
-#example port
-port = 443
+#example port (e.g. 443)
+port = int(input("Insert the port here: "))
 
 # function to test, if port is open
 def portscanner(port):
