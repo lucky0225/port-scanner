@@ -10,18 +10,17 @@ socket.setdefaulttimeout(2)
 
 # insert IPv4 address
 # IPv4 -> "ipconfig" in cmd
-#insert IPv4 address
 host = input("Insert the IPv4 address here: ")
 
-#example port (e.g. 443)
+# search for a specific port (e.g. 443)
 port = int(input("Insert the port here: "))
 
 # function to test, if port is open
 def portscanner(port):
-    #if connection results in error -> closed
+    # if connection results in error -> port shows as closed
     if sock.connect_ex((host,port)):
         print("Port %d is closed" % (port))
-    #else -> open
+    # else -> open
     else:
         print("Port %d is opened" % (port))
 
